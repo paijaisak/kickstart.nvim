@@ -32,6 +32,19 @@ return {
         return '%2l:%-2v'
       end
 
+      statusline.section_filename = function()
+        if vim.bo.buftype == 'terminal' then
+          return '%t'
+        else
+          return '%f%m%r'
+        end
+      end
+
+      require('mini.animate').setup()
+      require('mini.icons').setup()
+      require('mini.git').setup()
+      require('mini.diff').setup()
+
       -- ... and there is more!
       --  Check out: https://github.com/echasnovski/mini.nvim
     end,
