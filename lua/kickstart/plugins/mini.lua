@@ -32,6 +32,7 @@ return {
         return '%2l:%-2v'
       end
 
+      ---@diagnostic disable-next-line: duplicate-set-field
       statusline.section_filename = function()
         if vim.bo.buftype == 'terminal' then
           return '%t'
